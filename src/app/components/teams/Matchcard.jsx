@@ -7,7 +7,7 @@ import { CiStar } from "react-icons/ci";
 function Matchcard() {
   return (
     <div className="card-component w-11/12 h-[120px] bg-primary  flex items-center ">
-      <div className="left w-[50%] flex items-center text-white pl-2 justify-start gap-16 ">
+      <div className="left w-[50%] flex items-center text-white pl-2 justify-start gap-8 sm:gap-12  lg:gap-16 ">
         <p>
           <CiStar className="text-4xl" />
         </p>

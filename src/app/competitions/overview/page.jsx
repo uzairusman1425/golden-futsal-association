@@ -12,7 +12,7 @@ function page() {
         <div className="overview w-full h-full pt-10 flex flex-col gap-8">
           <h1 className="text-white">FIXTURES</h1>
           <div className="card w-11/12 h-full  flex ">
-            <div className="left w-[50%] flex text-white  justify-start gap-32">
+            <div className="left w-[50%] flex   justify-start text-white gap-20 lg:gap-32">
               <p></p>
               <p>DATE</p>
             </div>
@@ -24,10 +24,14 @@ function page() {
             <Matchescard />
           </div>
         </div>
+
+
+
+
         <div className="results w-full h-full pt-10 flex flex-col gap-8">
           <h1 className="text-white">RESULTS</h1>
           <div className="card w-11/12 h-full  flex ">
-            <div className="left w-[50%] flex text-white  justify-start gap-32">
+            <div className="left w-[50%] flex text-white  justify-start gap-24 lg:gap-32">
               <p></p>
               <p>DATE</p>
             </div>

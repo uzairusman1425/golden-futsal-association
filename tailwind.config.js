@@ -6,31 +6,23 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
- 
     screens: {
-      'sm': '640px',
-    
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "1920px",
+    },
 
-      'md': '768px',
-     
-
-      'lg': '1024px',
-    
-
-      'xl': '1280px',
-    
-
-      '2xl': '1536px',
-    '3xl':'1920px',
-  },
-    
     extend: {
-      colors:{
-        primary:'#041421',
-        secondary:'#061727',
-        main:'#040e17',
-        golden:'#b0a25c',
-        sidebar:'#0f2a3f'
+      colors: {
+        primary: "#041421",
+        secondary: "#061727",
+        main: "#040e17",
+        golden: "#b0a25c",
+        sidebar: "#0f2a3f",
+        mprimary: "#0F2A3F",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -39,7 +31,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('tailwind-scrollbar'),
-  ],
+  plugins: [require("tailwind-scrollbar")],
 };

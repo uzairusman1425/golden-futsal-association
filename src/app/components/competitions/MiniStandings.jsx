@@ -7,20 +7,18 @@ function Standings(props) {
     <>
       <div className="list w-11/12 mt-10  h-full">
         <table className="w-full h-full bg-[#040e17]">
-          <thead className="flex w-full justify-between text-white">
-            <tr className="flex gap-20">
-              <th>#</th>
-              <th>TEAM</th>
-            </tr>
-            <tr className="flex gap-[34px]">
-              <th>P</th>
-              <th>W</th>
-              <th>D</th>
-              <th>L</th>
-              <th>F</th>
-              <th>A</th>
-              <th>GO</th>
-              <th>PTS</th>
+        <thead className="flex w-full h-6 text-white items-center">
+            <tr className="lg:text-left w-full  h-full lg:block flex items-center ">
+              <th className="lg:w-[10%] w-[5%] ">#</th>
+              <th className="lg:w-[60%] w-[20%]">TEAM</th>
+              <th className="lg:w-[4%] w-[10%] ">P</th>
+              <th className="lg:w-[4%] w-[10%] ">W</th>
+              <th className="lg:w-[4%] w-[10%] ">D</th>
+              <th className="lg:w-[4%] w-[10%] ">L</th>
+              <th className="lg:w-[4%] w-[10%] ">F</th>
+              <th className="lg:w-[4%] w-[10%] ">A</th>
+              <th className="lg:w-[4%] w-[10%] ">GO</th>
+              <th className="lg:w-[4%] w-[10%] ">PTS</th>
             </tr>
           </thead>
 

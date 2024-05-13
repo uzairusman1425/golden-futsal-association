@@ -9,7 +9,9 @@ export default function TeamsLayout({
   children, 
 }) {
   return (
-    <section className="flex w-full h-max lg:text-[12px] 2xl:text-[14px]">
+    <>
+   
+    <section className="hidden lg:flex lg:w-full lg:h-max lg:text-[12px] 2xl:text-[14px]">
          <SideBar />   
       <section className="w-full h-max flex pt-4 bg-[#02070d] items-start sticky top-0  justify-center ">
         <div className="w-[90%]  h-full mt-10 flex gap-4  items-start  pl-2">
@@ -71,5 +73,54 @@ export default function TeamsLayout({
 
     
     </section>
+     <section className="w-full h-full lg:hidden flex flex-col pl-2 sm:pl-4 md:pl-10 pt-10 bg-main text-[10px] sm:text-[12px] md:text-[14px]">
+     <div className="title w-full h-[200px] pt-20 flex items-start gap-6">
+          <Image src={rm} width={100} height={100} alt="england.png" />
+          <div className="content flex flex-col ">
+            <h1 className="text-white text-xl font-semibold">
+              Premier League
+            </h1>
+            <p className="text-white font-light">England</p>
+          </div>
+        </div>
+        <div className="navigation w-11/12 px-2 flex items-center gap-20 justify-start bg-primary h-14 rounded-3xl mt-4 overflow-y-auto">
+            <Link
+              className="text-gray-400  hover:text-golden "
+              href={"/teams/overview"}
+            >
+              OVERVIEW
+            </Link>
+            <Link
+              className="text-gray-400  hover:text-golden  "
+              href={"/teams/matches"}
+            >
+              MATCHES
+            </Link>
+            <Link
+              className="text-gray-400   hover:text-golden "
+              href={"/teams/standings"}
+            >
+              STANDINGS
+            </Link>
+            <Link
+              className="text-gray-400   hover:text-golden "
+              href={"/teams/transfers"}
+            >
+              TRANSFERS
+            </Link>
+            <Link
+              className="text-gray-400  hover:text-golden "
+              href={"/teams/squad"}
+            >
+              SQUAD
+            </Link>
+          </div>
+        <div className="w-full h-full ">
+          {children}
+        </div>
+
+    
+  </section>
+  </>
   );
 }

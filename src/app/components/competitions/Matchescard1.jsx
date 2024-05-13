@@ -7,7 +7,7 @@ import { CiStar } from "react-icons/ci";
 function Matchescard1() {
   return (
     <div className="card-component w-11/12 h-[100px] bg-primary  flex items-center ">
-      <div className="left w-[50%] flex items-center text-white pl-2 justify-start gap-16 ">
+      <div className="left w-[50%] flex items-center text-white pl-2 justify-start gap-8 lg:gap-16 ">
         <p>
           <CiStar className="text-4xl" />
         </p>
@@ -19,12 +19,12 @@ function Matchescard1() {
       <div className="right w-[50%] items-center justify-between px-4 text-white  flex ">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-4">
-            <Image src={arsenal} width={30} alt="arsenal.png" />
+            <Image src={arsenal} width={20} alt="arsenal.png" />
             <p>Arsenal</p>
           </div>
 
           <div className="flex items-center gap-4 ">
-            <Image src={rm} width={30} alt="arsenal.png" />
+            <Image src={rm} width={20} alt="arsenal.png" />
             <p>Real Madrid</p>
           </div>
         </div>

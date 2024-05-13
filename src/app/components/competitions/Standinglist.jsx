@@ -6,33 +6,32 @@ import Image from "next/image";
 function Standinglist() {
   return (
     <>
-      <tbody className="flex w-full justify-between h-16  text-white items-center  bg-primary rounded-xl mt-2">
-        <tr className="flex gap-14">
-          <th className="w-[30px] h-10 rounded-lg bg-green-500 flex items-center justify-center font-bold">
-            1
+          <tbody className="flex w-full  h-16  text-white items-center  bg-primary rounded-xl mt-2">
+         <tr className="flex w-full items-center ">
+          <th className=" lg:w-[10%] w-[5%] ">
+            <p className=" lg:w-[30px] bg-green-500 flex items-center h-5 lg:h-10 rounded-lg justify-center font-bold">1</p>
           </th>
 
-          <th className="flex items-center gap-2">
+          <th className="flex items-center justify-center lg:justify-start lg:gap-2 gap-[1px] pl-2 lg:pl-0 w-[20%] lg:w-[60%]">
             <Image
               src={rm}
-              width={30}
+              width={20}
               className="bg-primary rounded-full"
               alt="rm.png"
             />
             Arsenal
           </th>
+
+          <th className="lg:w-[4%] w-[10%]">28</th>
+          <th className="lg:w-[4%] w-[10%]">19</th>
+          <th className="lg:w-[4%] w-[10%]">72</th>
+          <th className="lg:w-[4%] w-[10%]">22</th>
+          <th className="lg:w-[4%] w-[10%]">65</th>
+          <th className="lg:w-[4%] w-[10%]">26</th>
+          <th className="lg:w-[4%] w-[10%]">39</th>
+          <th className="lg:w-[4%] w-[10%]">64</th>
         </tr>
-        <tr className="flex gap-[29px]">
-          <th>28</th>
-          <th>19</th>
-          <th>72</th>
-          <th>22</th>
-          <th>65</th>
-          <th>26</th>
-          <th>39</th>
-          <th>64</th>
-        </tr>
-      </tbody>
+           </tbody>
     </>
   );
 }

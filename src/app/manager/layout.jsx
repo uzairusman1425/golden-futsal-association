@@ -7,7 +7,7 @@ import Link from "next/link";
 function ManagerLayout({ children }) {
   return (
     <>
-      <section className="w-full lg:text-[12px] 2xl:text-[14px] h-full flex pt-10 ">
+      <section className="hidden lg:w-full lg:text-[12px] 2xl:text-[14px] lg:h-full lg:flex lg:pt-10 ">
         <div className="sidebar w-[20%]  ">
           <SideBar />
         </div>

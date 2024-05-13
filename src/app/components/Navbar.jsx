@@ -14,12 +14,17 @@ import { FaBars } from "react-icons/fa6";
 import { RiMoonClearFill } from "react-icons/ri";
 import { LuSunMoon } from "react-icons/lu";
 import SignIn from "./SignIn";
+import { TbGridDots } from "react-icons/tb";
+import SideBar from "./SideBar/SideBar";
 
 function Navbar() {
   const [hidden, setHidden] = useState(true);
   const [nav, setNav] = useState(true);
   const [menu, setMenu] = useState(true);
+  const [menu1, setMenu1] = useState(true);
   const [text, setText] = useState(true);
+  const [hiddden, setHiddden] = useState(true);
+  const [routes, setRoutes] = useState(true);
 
   const toggleMenu = () => {
     setNav(!nav);
@@ -32,8 +37,8 @@ function Navbar() {
 
   return (
     <>
-      <section className="w-full  ">
-        <div className="navbar w-full  fixed top-0 z-40 xl:w-full h-20 bg-primary flex">
+      <section className="  w-full h-full ">
+        <div className="navbar w-full  fixed top-0 z-40  h-20 bg-primary hidden lg:flex">
           <div className="left w-[50%] flex items-center  ">
             <div className="logo w-full h-full ml-2 flex items-center gap-2">
               <div className="image">
@@ -45,7 +50,7 @@ function Navbar() {
                 />
               </div>
               <div className="title">
-                <h1 className="text-yellow-400 text-lg font-bold">
+                <h1 className="text-yellow-400 lg:text-lg text-sm  font-bold">
                   Golden <br />
                   <span className="text-sm font-normal">
                     FUTSAL ASSOCIATION
@@ -199,7 +204,135 @@ function Navbar() {
           </div>
         </div>
       </section>
-      <SignIn text={text} passwordShow={passwordShow} nav={nav} />
+
+      <section className="lg:hidden ">
+        <div className="mnavbar w-full    fixed top-0 z-40  h-20 bg-primary flex items-center justify-evenly">
+          <button
+            onClick={() => {
+              setRoutes(!routes);
+            }}
+          >
+            <TbGridDots className="text-xl text-white" />
+          </button>
+
+          <div className="logo w-max h-max ml-2 flex items-center gap-2">
+            <div className="image">
+              <Image
+                src={logo}
+                width={50}
+                className="rounded-full"
+                alt="logo.png"
+              />
+            </div>
+            <div className="title">
+              <h1 className="text-yellow-400 text-sm  font-bold">
+                Golden <br />
+                <span className="text-sm font-normal">FUTSAL ASSOCIATION</span>
+              </h1>
+            </div>
+          </div>
+          <div className="bars">
+            <button
+              onClick={() => {
+                setHiddden(!hiddden);
+              }}
+            >
+              <FaBars className="text-xl text-white" />
+            </button>
+          </div>
+        </div>
+
+        <div
+          className={`side-div w-6/12 sm:w-[400px] min-h-screen bg-primary ${
+            hiddden ? "hidden" : "absolute"
+          }  right-0 top-30 flex flex-col items-center justify-start pt-20`}
+        >
+          <div className="w-full h-full flex flex-col items-center justify-center gap-4">
+            <div className="search w-[45px] h-10 flex items-center justify-center bg-[#62676a] rounded-full">
+              <button>
+                {" "}
+                <CiSearch className="text-white text-2xl" />{" "}
+              </button>
+            </div>
+            <div className="sign-in w-[150px] text-white gap-2 h-10 flex items-center justify-center bg-[#62676a] rounded-full">
+              <button onClick={toggleMenu} className="flex items-center gap-2">
+                {" "}
+                Sign In <FaArrowRightFromBracket />
+              </button>
+            </div>
+            <div className="settings relative w-[45px] h-10 flex items-center justify-center bg-[#62676a] rounded-full">
+              <button
+                onClick={() => {
+                  setMenu1(!menu1);
+                }}
+              >
+                {" "}
+                <VscSettings className="text-white text-2xl" />{" "}
+              </button>
+            </div>
+          </div>
+          <div
+            className={`w-full h-max bg-[#071e30] ${
+              menu1 ? "hidden" : "flex"
+            } flex-col gap-4`}
+          >
+            <div className="w-full flex justify-around items-center text-white">
+              <Link href={"#"}>Settings</Link>
+              <IoIosArrowForward />
+            </div>
+            <div className="dark-mode w-full flex items-center justify-around text-white">
+              <p>Dark Mode</p>
+              <div className="w-[80px] rounded-full h-[40px] bg-black flex items-center px-2">
+                <button className="text-2xl  flex items-center justify-center gap-2 ">
+                  <RiMoonClearFill className="text-black  bg-golden rounded-[100px] h-[30px] w-[30px] " />
+                  <LuSunMoon className="h-[30px] w-[30px]" />
+                </button>
+              </div>
+            </div>
+            <div className="w-full flex justify-around items-center text-white">
+              <Link href={"#"}>English</Link>
+              <IoIosArrowForward />
+            </div>
+          </div>
+
+          <div className="tabs w-full h-full  flex flex-col items-center justify-center ">
+            <Link
+              href={"#"}
+              className=" px-5 py-4 font-semibold flex items-center gap-2 h-full text-golden bg-[#0c1b27] hover:text-golden hover:bg-[#0c1b27] "
+            >
+              {" "}
+              <CgScreen /> LIVE SCORES
+            </Link>
+            <Link
+              href={"#"}
+              className="text-white px-5 py-4 font-semibold flex items-center gap-2 h-full hover:text-golden hover:bg-[#0c1b27] "
+            >
+              {" "}
+              <RiNewspaperLine /> FAVOURITES
+            </Link>
+            <Link
+              href={"#"}
+              className="text-white px-5 py-4 font-semibold flex items-center gap-2 h-full hover:text-golden hover:bg-[#0c1b27] "
+            >
+              <RiNewspaperLine /> NEWS
+            </Link>
+          </div>
+
+         
+        </div>
+
+        <div
+          className={`side-div w-6/12 sm:w-[400px] min-h-screen bg-yellow-100 ${
+            routes ? "hidden" : "absolute"
+          } left-0 top-30`}
+        >
+          <SideBar />
+        </div>
+      </section>
+
+      <div className="block">
+        <SignIn text={text} passwordShow={passwordShow} nav={nav} />
+      </div>
     </>
   );
 }

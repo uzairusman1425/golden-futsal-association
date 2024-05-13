@@ -4,7 +4,7 @@ import SideBar from '../components/superadmin/Sidebar'
 function layout({children}) {
   return (
    <>
-   <section className='w-full h-full flex lg:text-[12px] 2xl:text-[14px]'>
+   <section className='hidden lg:w-full lg:h-full lg:flex lg:text-[12px] 2xl:text-[14px]'>
    <div className="sidebar w-[20%]  ">
           <SideBar />
         </div>

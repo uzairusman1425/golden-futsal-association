@@ -12,34 +12,34 @@ function SignIn(props) {
   return (
     <>
       <div
-        className={`signin opacity-95   bg-primary  flex top-[20%] 2xl:left-[25%] xl:left-[15%] lg:left-4 ${
+        className={`signin opacity-95   bg-primary  flex top-[20%]  left-[10%] 2xl:left-[25%] xl:left-[15%] lg:left-4 ${
           nav ? "hidden" : "absolute"
-        } z-50 w-[1000px] h-[500px] items-center`}
+        } z-50  w-10/12 lg:w-[1000px] h-[500px] items-center gap-2`}
       >
-        <div className="logo w-[40%] flex items-center justify-center ">
+        <div className="logo w-[30%] lg:w-[40%]  flex items-center justify-center ">
           <Image src={logo} className="rounded-full" alt="logo.png" />
         </div>
         <div className="div w-[2px] h-[400px] bg-gray-400"></div>
-        <div className="content flex flex-col items-start gap-6  justify-center pl-8 w-[60%]  h-full">
+        <div className="content flex  flex-col items-start gap-6  justify-center sm:pl-4 lg:pl-8 w-[70%] lg:w-[60%]  h-full">
           <h1 className="text-3xl text-white">Sign In</h1>
 
           <form
             action=""
-            className="w-max  h-max flex flex-col gap-6 items-center justify-center"
+            className="w-full lg:w-max  h-max flex flex-col gap-6   lg:items-center justify-center "
           >
-            <div className="intput-1 flex items-center w-[400px] px-2 bg-[#1f2b38] border-[1px] border-white h-[40px] rounded-3xl">
+            <div className="intput-1 flex items-center w-11/12 lg:w-[400px] px-2 bg-[#1f2b38] border-[1px] border-white h-[40px] rounded-3xl">
               <CiMail className="text-white text-xl" />
               <input
                 type="text"
-                className="outline-none text-white bg-[#1f2b38] px-2"
+                className="outline-none text-white bg-[#1f2b38] px-2 w-[100px]"
                 placeholder="Username"
               />
             </div>
-            <div className="intput-1 relative flex items-center w-[400px] px-2 bg-[#1f2b38] border-[1px] border-white h-[40px] rounded-3xl">
+            <div className="intput-1 relative flex items-center w-11/12 lg:w-[400px] px-2 bg-[#1f2b38] border-[1px] border-white h-[40px] rounded-3xl">
               <CiLock className="text-white text-xl" />
               <input
                 type={text ? "password" : "text"}
-                className="outline-none text-white bg-[#1f2b38] px-2"
+                className="outline-none text-white bg-[#1f2b38] px-2 w-[100px]"
                 placeholder="Password"
               />
               <button className="absolute right-4 " onClick={passwordShow}>
@@ -50,17 +50,17 @@ function SignIn(props) {
                 )}
               </button>
             </div>
-            <div className="tags w-[400px] flex justify-between">
+            <div className="tags w-10/12 lg:w-[400px] flex justify-between items-center">
               <div className="remember flex text-gray-400 gap-2">
                 <input type="checkbox" name="remember" id="rember" />
-                <p>Remember me </p>
+                <p className="text-[11px] lg:text-[16px]">Remember me </p>
               </div>
               <div className="forgot text-gray-400">
-                <Link href={"#"}>Forgot Password?</Link>
+                <Link href={"#"} className="text-[11px] lg:text-[16px]">Forgot Password?</Link>
               </div>
             </div>
-            <div className="button">
-              <button className="w-[400px] h-[34px] bg-golden rounded-2xl font-bold">
+            <div className="button w-full">
+              <button className="w-10/12  lg:w-[400px] h-[34px] bg-golden rounded-2xl font-bold">
                 Sign In
               </button>
             </div>

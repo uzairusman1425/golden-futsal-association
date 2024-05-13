@@ -31,20 +31,48 @@ function page() {
           </div>
 
           <div className="row-2 w-full h-full flex  ">
-            <div className="flex-col gap-20 flex h-full w-[30%]  relative">
-              <KnockOutCard1 position="20" />
-              <KnockOutCard1 position="245" />
-              <KnockOutCard1 position="460" />
-              <KnockOutCard1 position="670" />
+            <div className="flex-col gap-20 flex h-[840px] w-[30%]  relative">
+              <div className="w-full h-[150px] flex  absolute top-[20px] items-center justify-start gap-1">
+                <div className="w-[10%] h-[68%] border-r-[2px] border-t-2 border-b-2  border-white"></div>
+                <div className="line w-[10%] h-[2px] bg-white" />
+                <KnockoutCard id="9" />
+              </div>
+              <div className="w-full h-[150px] flex  absolute top-[245px] items-center justify-start gap-1">
+                <div className="w-[10%] h-[68%] border-r-[2px] border-t-2 border-b-2  border-white"></div>
+                <div className="line w-[10%] h-[2px] bg-white" />
+                <KnockoutCard id="9" />
+              </div>
+              <div className="w-full h-[150px] flex  absolute top-[460px] items-center justify-start gap-1">
+                <div className="w-[10%] h-[68%] border-r-[2px] border-t-2 border-b-2  border-white"></div>
+                <div className="line w-[10%] h-[2px] bg-white" />
+                <KnockoutCard id="9" />
+              </div>
+              <div className="w-full h-[150px] flex  absolute top-[670px] items-center justify-start gap-1">
+                <div className="w-[10%] h-[68%] border-r-[2px] border-t-2 border-b-2  border-white"></div>
+                <div className="line w-[10%] h-[2px] bg-white" />
+                <KnockoutCard id="9" />
+              </div>
             </div>
 
             <div className="w-[30%] h-full flex flex-col  relative">
-              <Knockoutcard2 position="80" />
-              <Knockoutcard2 position="520" />
+              <div className="w-full h-[250px]  absolute top-[80px] flex items-center justify-start gap-1">
+                <div className="w-[30px] h-[90%] border-t-2 border-b-2 border-r-2 border-white "></div>
+                <div className="w-[10%] h-[2px] bg-white" />
+                <KnockoutCard id="10" />
+              </div>
+              <div className="w-full h-[250px]  absolute top-[520px] flex items-center justify-start gap-1">
+                <div className="w-[30px] h-[90%] border-t-2 border-b-2 border-r-2 border-white "></div>
+                <div className="w-[10%] h-[2px] bg-white" />
+                <KnockoutCard id="10" />
+              </div>
             </div>
 
             <div className="w-[25%] h-full relative">
-              <Knockoutcard3 position="200" />
+              <div className="w-full h-[450px]  flex items-center justify-start absolute top-[200px] gap-1">
+                <div className="w-[30px] h-[99%] bg-yellow border-b-2 border-t-2 border-r-2 border-white"></div>
+                <div className="w-[30px] h-[2px] bg-white" />
+                <KnockoutCard id="10" />
+              </div>
             </div>
           </div>
         </div>

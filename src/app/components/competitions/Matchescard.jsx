@@ -8,7 +8,7 @@ function Matchescard() {
   return (
     <>
       <div className="card-component w-11/12 h-[100px] bg-primary  flex items-center ">
-        <div className="left w-[50%] flex items-center text-white pl-2 justify-start gap-16 ">
+        <div className="left w-[50%] flex items-center text-white pl-2 justify-start gap-8 xl:gap-16 ">
           <p>
             <CiStar className="text-4xl" />
           </p>
@@ -19,12 +19,12 @@ function Matchescard() {
         </div>
         <div className="right w-[50%] text-white gap-2 flex flex-col">
           <div className="flex items-center gap-4">
-            <Image src={arsenal} width={30} alt="arsenal.png" />
+            <Image src={arsenal} width={20} alt="arsenal.png" />
             <p>Arsenal</p>
           </div>
 
           <div className="flex items-center gap-4 ">
-            <Image src={rm} width={30} alt="arsenal.png" />
+            <Image src={rm} width={20} alt="arsenal.png" />
             <p>Real Madrid</p>
           </div>
         </div>

@@ -3,6 +3,7 @@ import rm from "../../../public/images/sidebar/teams/rm.png";
 import Image from 'next/image';
 import Link from 'next/link';
 import Charts from "../components/teams/Charts";
+import Navbar from "../components/Navbar";
 
 
 export default function TeamsLayout({
@@ -10,7 +11,7 @@ export default function TeamsLayout({
 }) {
   return (
     <>
-   
+     <Navbar sidebar={<SideBar/>}/>
     <section className="hidden lg:flex lg:w-full lg:h-max lg:text-[12px] 2xl:text-[14px]">
          <SideBar />   
       <section className="w-full h-max flex pt-4 bg-[#02070d] items-start sticky top-0  justify-center ">
@@ -73,8 +74,10 @@ export default function TeamsLayout({
 
     
     </section>
+
+    
      <section className="w-full h-full lg:hidden flex flex-col pl-2 sm:pl-4 md:pl-10 pt-10 bg-main text-[10px] sm:text-[12px] md:text-[14px]">
-     <div className="title w-full h-[200px] pt-20 flex items-start gap-6">
+     <div className="title w-full h-[220px]  pt-20 flex items-center gap-6">
           <Image src={rm} width={100} height={100} alt="england.png" />
           <div className="content flex flex-col ">
             <h1 className="text-white text-xl font-semibold">
@@ -83,6 +86,7 @@ export default function TeamsLayout({
             <p className="text-white font-light">England</p>
           </div>
         </div>
+
         <div className="navigation w-11/12 px-2 flex items-center gap-20 justify-start bg-primary h-14 rounded-3xl mt-4 overflow-y-auto">
             <Link
               className="text-gray-400  hover:text-golden "
@@ -113,6 +117,12 @@ export default function TeamsLayout({
               href={"/teams/squad"}
             >
               SQUAD
+            </Link>
+            <Link
+              className="text-gray-400  hover:text-golden "
+              href={"/teams/charts"}
+            >
+              CHARTS
             </Link>
           </div>
         <div className="w-full h-full ">

@@ -15,25 +15,25 @@ function SquadList() {
   };
   return (
     <>
-      <tbody className="w-full h-20 bg-primary text-white red-100 overflow-x-auto rounded-3xl flex    px-2 text-[12px]">
+      <tbody className="w-full h-24 bg-primary text-white   rounded-3xl flex    lg:px-2 ">
         <tr className="flex items-center w-full h-full text-left">
-          <th className="w-[25%] flex gap-2 items-center ">
+          <th className="xl:w-[25%] w-[20%] flex gap-[1px] lg:gap-2 items-center ">
             <Image
               className="rounded-3xl"
               src={manager}
               alt="manager"
-              width={30}
+              width={20}
             />
             Allison
           </th>
 
-          <th className="xl:w-[15%] lg:w-[20%] ">
+          <th className="xl:w-[15%] w-[18%] lg:w-[20%] ">
             {edit ? (
               "Goal Keeper"
             ) : (
               <select
                 name="position"
-                className="h-10 bg-sidebar  rounded-lg w-[100px]"
+                className="h-10 bg-sidebar  rounded-lg sm:w-[80px] w-[50px] lg:w-[100px] outline-none"
               >
                 <option value="Goal Keeper">Goal Keeper</option>
                 <option value="Central Forward">Central Forward</option>
@@ -42,25 +42,25 @@ function SquadList() {
             )}
           </th>
 
-          <th className="xl:w-[12%] lg:w-[15%]">
+          <th className="xl:w-[12%] w-[22%]  lg:w-20%] ">
             {edit ? (
               "97%"
             ) : (
               <input
                 type="number"
                 value="97"
-                className="bg-sidebar h-10 w-[30px] text-white"
+                className="bg-sidebar  outline-none h-10 w-[30px] text-white"
               />
             )}
           </th>
 
-          <th className="text-green-700 xl:w-[20%] lg:w-[25%]">
+          <th className="text-green-700 xl:w-[20%] w-[18%] lg:w-[25%]">
             {edit ? (
               "Good Performance"
             ) : (
               <select
                 name="position"
-                className="h-10 bg-sidebar  w-[140px] rounded-lg"
+                className="h-10 bg-sidebar outline-none w-[50px] sm:w-[80px] lg:w-[140px] rounded-lg"
               >
                 <option value="Good Performance">Good Performance</option>
                 <option value="Injury" className="text-red-700">
@@ -70,31 +70,32 @@ function SquadList() {
             )}
           </th>
 
-          <th className="xl:w-[15%] lg:w-[18%]">
+          <th className="xl:w-[15%] w-[15%] lg:w-[18%]">
             {edit ? (
               "01"
             ) : (
               <input
                 type="number"
                 value="01"
-                className="bg-sidebar h-10 w-[30px] text-white"
+                className="bg-sidebar  outline-none h-10 w-[30px] text-white"
               />
             )}
           </th>
-          <th className="flex items-center gap-6 w-[13%]">
+
+          <th className="flex items-center flex-col sm:flex-row gap-[5px] lg:gap-[1px] xl:gap-6 ">
             {edit ? (
               <>
                 <button>
                   {" "}
-                  <BiTransferAlt className="text-xl" />
+                  <BiTransferAlt className="text-sm sm:text-lg lg:text-xl" />
                 </button>
                 <button onClick={Edit}>
                   {" "}
-                  <FaRegEdit className="text-xl" />
+                  <FaRegEdit className="text-sm sm:text-lg lg:text-xl" />
                 </button>
 
                 <button>
-                  <MdDelete className="text-xl" />
+                  <MdDelete className="text-sm  sm:text-lg lg:text-xl" />
                 </button>
               </>
             ) : (

@@ -9,11 +9,11 @@ import TeamCard from '@/app/components/superadmin/TeamCard';
 
 function page() {
   return (
-   <div className="officialteam w-full min-h-screen pl-10 flex flex-col gap-4 pt-10">
+   <div className="officialteam w-full min-h-screen lg:pl-10 flex flex-col gap-4 pt-10">
     <Title/>
     <div className="line w-11/12 h-[1px] bg-gray-700"/>
-    <div className="heading w-11/12 h-12 flex items-center text-gray-400">
-      <div className='w-[25%] pl-10'><p>NAME</p></div>
+    <div className="heading w-full lg:w-11/12 h-12 flex items-center text-gray-400 text-[9px] sm:text-[10px] md:text-[12px] lg:text-[14px]">
+      <div className='w-[25%] pl-4 lg:pl-10'><p>NAME</p></div>
       <div className='w-[50%]'><p>POSITION</p></div>
       <div className='w-[25%]'><p>ACTION</p></div>
     </div>

@@ -6,17 +6,19 @@ import { FaRegEyeSlash } from "react-icons/fa";
 import { LuEye } from "react-icons/lu";
 import logo from "../../../public/images/navbar/logo.jpg";
 import Link from "next/link";
+import { RxCross2 } from "react-icons/rx";
 
 function SignIn(props) {
-  const { text, passwordShow, nav } = props;
+  const { text, passwordShow, nav ,setNav} = props;
   return (
     <>
       <div
-        className={`signin opacity-95   bg-primary  flex top-[20%]  left-[10%] 2xl:left-[25%] xl:left-[15%] lg:left-4 ${
+        className={`signin opacity-95   bg-primary  flex top-[20%]  left-[10%] 2xl:left-[25%] xl:left-[15%] lg:left-4 border-[1px] border-blue-900  ${
           nav ? "hidden" : "absolute"
         } z-50  w-10/12 lg:w-[1000px] h-[500px] items-center gap-2`}
       >
-        <div className="logo w-[30%] lg:w-[40%]  flex items-center justify-center ">
+       <div className="w-full h-full flex items-center gap-2 relative" >
+       <div className="logo w-[30%] lg:w-[40%]  flex items-center justify-center ">
           <Image src={logo} className="rounded-full" alt="logo.png" />
         </div>
         <div className="div w-[2px] h-[400px] bg-gray-400"></div>
@@ -66,6 +68,14 @@ function SignIn(props) {
             </div>
           </form>
         </div>
+       </div>
+      
+        <button  
+        onClick={()=>{setNav(!nav)}}
+        className="div   absolute top-[-10px] right-0 rounded-full border-[2px] border-white ">
+            <RxCross2 className="text-white text-2xl"/>
+        </button>
+      
       </div>
     </>
   );

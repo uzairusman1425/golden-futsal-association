@@ -8,7 +8,7 @@ function page() {
   return (
     <div className="officialteam w-full min-h-screen">
         <div className="search w-full h-max flex items-center  justify-between">
-        <div className="w-4/12 h-[40px] bg-sidebar px-2 rounded-3xl flex gap-4 items-center">
+        <div className="w-5/12 lg:w-4/12 h-[40px] bg-sidebar px-2 rounded-3xl flex gap-4 items-center">
           <CiSearch className="text-xl text-white" />
           <input
             type="text"
@@ -18,7 +18,7 @@ function page() {
             placeholder="Seach"
           />
         </div>
-        <div className="w-[200px] h-[40px] ">
+        <div className="w-[150px] lg:w-[200px] h-[40px] ">
           <button className="w-full h-full rounded-3xl flex font-bold items-center justify-center gap-2 bg-yellow-400 ">
             <IoPersonAddOutline />
             Add New Official
@@ -27,16 +27,12 @@ function page() {
       </div>
 
       <table className='w-full h-full flex flex-col gap-2 '>
-        <thead className='w-full h-12 text-white text-sm flex items-center  '>
-            <tr className='w-[30%] h-12 flex items-center justify-between px-4 '>
-                
-                <th>Name</th>
-                <th className='flex  self-'>Position</th>
+        <thead className='w-full h-12 text-white  flex items-center  '>
+            <tr className='w-full h-12 text-left flex  items-center'> 
+                <th className='w-[30%] lg:pl-12'>Name</th>
+                <th className='w-[70%]'>Position</th>
+                <th>Action</th> 
             </tr>
-            <tr className='w-[70%] h-12 flex items-center justify-end px-4'>
-                <th>Action</th>
-            </tr>
-            <tr></tr>
         </thead>
       <TeamList/>
       <TeamList/>

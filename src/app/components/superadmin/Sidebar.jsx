@@ -23,7 +23,7 @@ function SideBar() {
         <p className="text-white">Super Admin</p>
       </div>
       <div className="line w-[90%] h-[1px] bg-gray-400" />
-      <div className="section-1 w-full h-max flex flex-col items-center justify-start pt-4">
+      <div className="section-1 w-full h-max flex flex-col items-start pl-2 lg:pl-0 xl:items-center justify-start pt-4">
         <SidebarButton icon={CiTrophy} title="Tournament Management" />
         <SidebarButton icon={IoCheckmarkDoneOutline} title="Player Approval" />
         <SidebarButton icon={HiOutlineUsers} title="User Management" />
@@ -31,7 +31,7 @@ function SideBar() {
         <SidebarButton icon={CiUser} title="My Account" />
       </div>
       <div className="line w-[90%] h-[1px] bg-gray-400" />
-      <div className="section-1 w-full h-max flex flex-col items-center justify-start pt-4">
+      <div className="section-1 w-full h-max flex flex-col items-start pl-2 lg:pl-0 xl:items-center justify-start pt-4">
         <SidebarButton icon={IoSettingsOutline} title="Settings" />
         <SidebarButton icon={IoIosLogOut} title="Logout" />
       </div>

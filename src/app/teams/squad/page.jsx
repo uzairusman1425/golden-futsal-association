@@ -10,7 +10,7 @@ function page() {
   return (
     <>
     <div className="squad w-11/12 min-h-screen flex flex-col mt-10 text-white gap-6 ">
-    <div className="coach w-full h-[80px] rounded-lg bg-primary flex items-center gap-28 px-2 ">
+    <div className="coach w-full h-[80px] rounded-lg bg-primary flex items-center gap-20 lg:gap-28 px-2 ">
       <div className='flex flex-col '>
         <p className='text-gray-400'>COACH</p>
         <p className='text-white'>Jurgen Klapp</p>

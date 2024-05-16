@@ -6,7 +6,7 @@ import { FaPlus } from "react-icons/fa";
 function Newjersey() {
   return (
     <>
-      <div className="jerseycard w-[24%] h-[300px] flex flex-col items-center pt-2  rounded-md bg-primary">
+      <div className="jerseycard lg:w-[24%] h-[300px] flex flex-col items-center pt-2  rounded-md bg-primary">
         <p className="text-gray-400">Add new jersey</p>
         <div className="image w-full h-full relative flex items-center justify-center">
           <Image src={jersey} width={200} alt="jersey.png" />

@@ -15,9 +15,9 @@ import { RiMoonClearFill } from "react-icons/ri";
 import { LuSunMoon } from "react-icons/lu";
 import SignIn from "./SignIn";
 import { TbGridDots } from "react-icons/tb";
-import SideBar from "./SideBar/SideBar";
 
-function Navbar() {
+function Navbar(props) {
+  const {sidebar}=props
   const [hidden, setHidden] = useState(true);
   const [nav, setNav] = useState(true);
   const [menu, setMenu] = useState(true);
@@ -245,7 +245,7 @@ function Navbar() {
         <div
           className={`side-div w-6/12 sm:w-[400px] min-h-screen bg-primary ${
             hiddden ? "hidden" : "absolute"
-          }  right-0 top-30 flex flex-col items-center justify-start pt-20`}
+          }  right-0 top-30 flex flex-col  gap-4 items-center justify-start pt-20`}
         >
           <div className="w-full h-full flex flex-col items-center justify-center gap-4">
             <div className="search w-[45px] h-10 flex items-center justify-center bg-[#62676a] rounded-full">
@@ -272,7 +272,7 @@ function Navbar() {
             </div>
           </div>
           <div
-            className={`w-full h-max bg-[#071e30] ${
+            className={`w-[90%] h-max bg-[#071e30] ${
               menu1 ? "hidden" : "flex"
             } flex-col gap-4`}
           >
@@ -326,12 +326,12 @@ function Navbar() {
             routes ? "hidden" : "absolute"
           } left-0 top-30`}
         >
-          <SideBar />
+          {sidebar}
         </div>
       </section>
 
       <div className="block">
-        <SignIn text={text} passwordShow={passwordShow} nav={nav} />
+        <SignIn text={text} passwordShow={passwordShow} nav={nav}  setNav={setNav}/>
       </div>
     </>
   );

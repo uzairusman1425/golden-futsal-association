@@ -36,9 +36,9 @@ const data = [
 
 function MatchHistory() {
   return (
-    <div className="match w-10/12 h-[300px] rounded-xl bg-primary flex flex-col items-center gap-2 justify-center">
+    <div className="match w-11/12 sm:w-8/12 md:w-6/12  lg:w-10/12 h-[350px] rounded-xl bg-primary flex flex-col items-center gap-2 justify-center">
       <h1 className="font-semibold flex self-start ml-4">Match History</h1>
-      <div className="xl:w-full h-[200px] lg:w-[250px]">
+      <div className="xl:w-full h-[200px] lg:w-[250px] w-full">
         <ResponsiveContainer>
           <ComposedChart
             width={200}

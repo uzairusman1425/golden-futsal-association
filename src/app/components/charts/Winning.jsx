@@ -25,7 +25,7 @@ const style = {
 
 function Winning() {
   return (
-    <div className="winning w-10/12 h-[300px] rounded-xl bg-primary flex flex-col items-center gap-2 justify-center">
+    <div className="winning w-10/12 sm:w-8/12 md:w-6/12 lg:w-10/12 h-[300px] rounded-xl bg-primary flex flex-col items-center gap-2 justify-center">
       <h1 className="font-semibold flex self-start ml-4 mt-4">
         Winning percentage
       </h1>

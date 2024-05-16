@@ -12,7 +12,7 @@ function Main() {
     <CompetitionLayout>
     <CompetitionsStandings/>
     </CompetitionLayout>
-  </section>
+     </section>
 
     </>
   )

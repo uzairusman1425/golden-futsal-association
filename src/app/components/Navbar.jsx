@@ -15,6 +15,9 @@ import { RiMoonClearFill } from "react-icons/ri";
 import { LuSunMoon } from "react-icons/lu";
 import SignIn from "./SignIn";
 import { TbGridDots } from "react-icons/tb";
+import { useSession,signOut } from "next-auth/react"
+
+
 
 function Navbar(props) {
   const {sidebar}=props
@@ -25,6 +28,8 @@ function Navbar(props) {
   const [text, setText] = useState(true);
   const [hiddden, setHiddden] = useState(true);
   const [routes, setRoutes] = useState(true);
+  const { data: session, status } = useSession()
+
 
   const toggleMenu = () => {
     setNav(!nav);
@@ -106,13 +111,22 @@ function Navbar(props) {
                   </button>
                 </div>
                 <div className="sign-in w-[150px] text-white gap-2 h-10 flex items-center justify-center bg-[#62676a] rounded-full">
-                  <button
+                {session?
+                 <button
+                  onClick={()=>{signOut()}}
+                 className="flex items-center gap-2"
+               >
+                 {" "}
+                 Sign Out <FaArrowRightFromBracket />
+               </button>
+                :  
+                <button
                     onClick={toggleMenu}
                     className="flex items-center gap-2"
                   >
                     {" "}
                     Sign In <FaArrowRightFromBracket />
-                  </button>
+                  </button>}
                 </div>
 
                 <div className="settings w-[45px] h-10 flex items-center justify-center bg-[#62676a] rounded-full">
@@ -159,13 +173,22 @@ function Navbar(props) {
                 </button>
               </div>
               <div className="sign-in w-[150px] text-white gap-2 h-10 flex items-center justify-center bg-[#62676a] rounded-full">
+              {session?
+                 <button
+                 onClick={()=>{signOut()}}
+                 className="flex items-center gap-2"
+               >
+                 {" "}
+                 Sign Out <FaArrowRightFromBracket />
+               </button>
+                :  
                 <button
-                  onClick={toggleMenu}
-                  className="flex items-center gap-2"
-                >
-                  {" "}
-                  Sign In <FaArrowRightFromBracket />
-                </button>
+                    onClick={toggleMenu}
+                    className="flex items-center gap-2"
+                  >
+                    {" "}
+                    Sign In <FaArrowRightFromBracket />
+                  </button>}
               </div>
               <div className="settings relative w-[45px] h-10 flex items-center justify-center bg-[#62676a] rounded-full">
                 <button
@@ -201,6 +224,10 @@ function Navbar(props) {
                 </div>
               </div>
             </div>
+
+
+
+
           </div>
         </div>
       </section>
@@ -255,10 +282,22 @@ function Navbar(props) {
               </button>
             </div>
             <div className="sign-in w-[150px] text-white gap-2 h-10 flex items-center justify-center bg-[#62676a] rounded-full">
-              <button onClick={toggleMenu} className="flex items-center gap-2">
-                {" "}
-                Sign In <FaArrowRightFromBracket />
-              </button>
+            {session?
+                 <button
+                 onClick={()=>{signOut()}}
+                 className="flex items-center gap-2"
+               >
+                 {" "}
+                 Sign Out <FaArrowRightFromBracket />
+               </button>
+                :  
+                <button
+                    onClick={toggleMenu}
+                    className="flex items-center gap-2"
+                  >
+                    {" "}
+                    Sign In <FaArrowRightFromBracket />
+                  </button>}
             </div>
             <div className="settings relative w-[45px] h-10 flex items-center justify-center bg-[#62676a] rounded-full">
               <button

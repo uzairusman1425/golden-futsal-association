@@ -26,8 +26,6 @@ export async function POST(req) {
         return NextResponse.json({ message: "created user", data: createdUser, Success: true }, { status: 200 })
         // insert user
 
-
-
     } catch (error) {
         return NextResponse.json({ error: error.message }, { status: 500 })
     }
